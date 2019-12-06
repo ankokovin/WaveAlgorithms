@@ -32,6 +32,7 @@
             this.rtbGraphStructure = new System.Windows.Forms.RichTextBox();
             this.bParseGraph = new System.Windows.Forms.Button();
             this.cbIsDirected = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
             // bStart
@@ -73,11 +74,25 @@
             this.cbIsDirected.Text = "Направленный";
             this.cbIsDirected.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(160, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(628, 274);
+            this.tableLayoutPanel1.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.cbIsDirected);
             this.Controls.Add(this.bParseGraph);
             this.Controls.Add(this.rtbGraphStructure);
@@ -96,6 +111,7 @@
         private System.Windows.Forms.RichTextBox rtbGraphStructure;
         private System.Windows.Forms.Button bParseGraph;
         private System.Windows.Forms.CheckBox cbIsDirected;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

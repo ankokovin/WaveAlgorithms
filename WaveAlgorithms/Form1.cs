@@ -36,15 +36,25 @@ namespace WaveAlgorithms
                 edges.Add(new Tuple<int, int>(nums[0], nums[1]));
             }
             graph = new Graph(cbIsDirected.Checked, vertCount, edges);
+            tableLayoutPanel1.RowCount  = vertCount;
+            for (int i = 0; i < vertCount; i++)
+            {
+                var label = new Label();
+                label.Text = graph.nodes[i].ToString();
+                tableLayoutPanel1.Controls.Add(label, 0, i);
+                var numeric = new NumericUpDown();
+                tableLayoutPanel1.Controls.Add(numeric, 1, i);
+                var button = new Button();
+                button.Text = "Начать алгоритм";
+                tableLayoutPanel1.Controls.Add(button, 2, i);
+
+            }
             bStart.Enabled = true;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            foreach(var process in Program.ChildProcesses)
-            {
-                process.Kill();
-            }
+           
         }
     }
 }
