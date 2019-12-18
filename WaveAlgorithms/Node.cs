@@ -8,11 +8,12 @@ namespace WaveAlgorithms
 {
     class Node
     {
+        private static int cnt = 0;
         private string Name;
         public List<Node> Neigbours;
         public Node()
         {
-            Name = "Client_" + (Guid.NewGuid()).ToString();
+            Name = "Client_" +(++cnt);
             Neigbours = new List<Node>();
         }
         public void AddNeigbour(Node node)
@@ -24,9 +25,9 @@ namespace WaveAlgorithms
             return Name;
         }
 
-        public string Args()
+        public string Args(decimal val)
         {
-            string result = Name;
+            string result = Name+" " + val + " ";
             foreach (var name in Neigbours.Select(x => x.Name)) result += " " + name;
             return result;
         }
