@@ -23,6 +23,10 @@ namespace WaveAlgorithms
         {
             for (int i = 0; i < graph.nodes.Count; i++)
             {
+                tableLayoutPanel1.Controls[3 * i + 2].Enabled = true;
+            }
+            foreach(var node in graph.nodes)
+            {
                 Program.StartChild(graph.nodes[i].Args(vals[i]));
             }
             started = true;
@@ -53,6 +57,7 @@ namespace WaveAlgorithms
                 tableLayoutPanel1.Controls.Add(numeric, 1, i);
                 var button = new Button();
                 button.Text = "Обновить";
+                button.Enabled = false;
                 tableLayoutPanel1.Controls.Add(button, 2, i);
                 button.MouseClick+= (_sender, _e) => UpdateValue(id, numeric.Value);
                 var button2 = new Button();
