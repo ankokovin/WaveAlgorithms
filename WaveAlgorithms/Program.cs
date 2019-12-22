@@ -146,7 +146,7 @@ namespace WaveAlgorithms
                 rec++;
                 if (sp.Length < 2)
                 {
-                    Task.Run(() => Send(parent, "tok " + MyPipeName + " " + Productivity));
+                    Task.Run(() => Send(parent, "tok " + MyPipeName + " " + 0));
                 }
                 else
                 {
@@ -185,7 +185,7 @@ namespace WaveAlgorithms
                     decide();
             }
         }
-        public static double eps = 1e-1;
+        public static double eps = 1e-2;
         public static void decide()
         {
             Console.WriteLine("Decide");

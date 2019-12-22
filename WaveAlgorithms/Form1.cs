@@ -23,10 +23,7 @@ namespace WaveAlgorithms
         {
             for (int i = 0; i < graph.nodes.Count; i++)
             {
-                tableLayoutPanel1.Controls[3 * i + 2].Enabled = true;
-            }
-            foreach(var node in graph.nodes)
-            {
+                tableLayoutPanel1.Controls[4 * i + 2].Enabled = true;
                 Program.StartChild(graph.nodes[i].Args(vals[i]));
             }
             started = true;
